@@ -5,6 +5,7 @@
 package org.ieselcaminas.tetris;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
@@ -43,7 +44,10 @@ public class Score implements Comparable<Score>, Serializable{
 
     @Override
     public String toString() {
-        return "Score{" + "name=" + name + ", score=" + score + ", date=" + date + ", level=" + level + '}';
+        SimpleDateFormat form = 
+                new SimpleDateFormat("yyyy-MM-dd");
+        String dateStr = form.format(date.getTime());
+        return name + ": " + score + ", " + dateStr;
     }
     
 }
