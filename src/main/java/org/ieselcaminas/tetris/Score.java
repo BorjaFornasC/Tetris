@@ -40,5 +40,10 @@ public class Score implements Comparable<Score>, Serializable{
        Integer i2 = t.score;
        return i.compareTo(i2);
     }
+
+    @Override
+    public String toString() {
+        return "Score{" + "name=" + name + ", score=" + score + ", date=" + date + ", level=" + level + '}';
+    }
     
 }

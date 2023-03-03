@@ -31,6 +31,7 @@ public class Scores {
         for (int i = 0; i < lists.length; i++) {
             lists[i] = new ArrayList<>();
         }
+        readNewFile();
     }
     
     public void addScore(Score score) {
@@ -80,7 +81,7 @@ public class Scores {
        
     }
     
-    public void readnNewFile() {
+    public void readNewFile() {
         ObjectInputStream in = null;
         
         try {
